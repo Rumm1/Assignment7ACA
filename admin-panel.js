@@ -1,4 +1,4 @@
-// admin-panel.js
+
 class AdminPanel {
     constructor() {
         this.sections = JSON.parse(localStorage.getItem('adminSections')) || [];
@@ -26,7 +26,6 @@ class AdminPanel {
     }
 
     renderAdminSections() {
-        // Добавляем админ-секции в основной контент страницы
         const adminSectionsHTML = `
             <!-- Admin Dashboard Section -->
             <section class="admin-dashboard-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
@@ -125,7 +124,6 @@ class AdminPanel {
             </section>
         `;
 
-        // Вставляем после hero секции или в начало основного контента
         const heroSection = document.querySelector('.aca-hero');
         if (heroSection) {
             heroSection.insertAdjacentHTML('afterend', adminSectionsHTML);
@@ -968,4 +966,5 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = 'index.html';
     }
 });
+
 
